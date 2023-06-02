@@ -9,10 +9,9 @@
 <body>
     <div id="result"></div>
     <script>
-        fetch("api.php").then(response=>response.json()).then(response=>{
+        fetch("JokesAPI.php").then(response=>response.json()).then(response=>{
             console.log(response);
-            document.getElementById("result").textContent=response;
-            
+            document.getElementById("result").textContent=response.joke;
         }).catch(e=>{
             console.log(e);
         })
