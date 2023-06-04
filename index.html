@@ -9,12 +9,17 @@
 <body>
     <div id="result"></div>
     <script>
-        fetch("JokesAPI.php").then(response=>response.json()).then(response=>{
-            console.log(response);
-            document.getElementById("result").textContent=response.joke;
-        }).catch(e=>{
+       fetch("JokesAPI.php")
+       .then(response=>response.json())
+       .then(response=>{
+        console.log(response);
+        document.querySelector("#result").textContent=response.joke;
+       })
+       .catch(e=>{
             console.log(e);
-        })
+       })
     </script>
+    <h1>Hello</h1>
+    <a href="docs.html">Documentation</a>
 </body>
 </html>
