@@ -3,9 +3,11 @@
 
 ## Usage
 
-<p>To use the Random Jokes API, you can make a GET request to the provided endpoint `/JokesAPI.php` to retrieve a random joke in JSON format.</p>
+<p>To use the Random Jokes API, you can make a GET request to the provided endpoint `JokesAPI` to retrieve a random joke in JSON format.</p>
 
 ### Example Request
+<p>Using Fetch</p>
+
 ```JavaScript
 fetch("GET","JokesAPI.php")
 .then(response=>response.json())
@@ -15,12 +17,25 @@ fetch("GET","JokesAPI.php")
     console.log(e);
 })
 ```
+<p>Using AJAX</p>
+
+```JavaScript
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'JokesAPI.php');
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    var data = JSON.parse(xhr.responseText);
+    console.log(data);
+  }
+};
+xhr.send();
+```
+
 ### Example Response
 
 ```json
 {
   joke:"Why did the computer file a complaint with HR? It had a conflict with its mouse."
-
 }
 ```
 
