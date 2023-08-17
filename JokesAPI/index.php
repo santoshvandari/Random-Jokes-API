@@ -37,28 +37,29 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
 
 
 
-
-;
-
-
+?>
+<?php
 
 
 
 
 
 
-$filename = 'jokes.txt'; // Replace with your file's name
 
-// Check if the file exists
-if (file_exists($filename)) {
-    // Read the file contents
-    $fileContents = file_get_contents($filename);
-    $dataArray = explode('"', $fileContents);
-    // Output the contents
-    // echo $fileContents;
-    print_r($dataArray);
-    echo $dataArray[3];
-} else {
-    echo "File not found.";
-}
+
+// $filename = 'jokes.txt'; // Replace with your file's name
+
+// // Check if the file exists
+// if (file_exists($filename)) {
+//     // Read the file contents
+//     $fileContents = file_get_contents($filename);
+//     $dataArray = explode('"', $fileContents);
+//     // Output the contents
+//     // echo $fileContents;
+//     print_r($dataArray);
+//     echo $dataArray[3];
+// } else {
+//     echo "File not found.";
+// }
+// 
 ?>
