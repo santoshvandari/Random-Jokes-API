@@ -1,6 +1,6 @@
 document.getElementById("btn-fetch").addEventListener("click",FetchData);
 function FetchData(){
-    const url = "http://randomjokesapi.santosh0.com.np/JokesAPI/";
+    const url = "/JokesAPI/index.php";
     fetch(url)
     .then(response=>response.json())
     .then(response=>{
