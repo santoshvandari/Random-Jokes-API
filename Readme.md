@@ -9,7 +9,7 @@
 <p>Using Fetch</p>
 
 ```JavaScript
-fetch("GET","JokesAPI.php")
+fetch("GET","JokesAPI/JokesAPI.php")
 .then(response=>response.json())
 .then(response=>{
     console.log(response);
@@ -21,7 +21,7 @@ fetch("GET","JokesAPI.php")
 
 ```JavaScript
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'JokesAPI.php');
+xhr.open('GET', 'JokesAPI/JokesAPI.php');
 xhr.onreadystatechange = function() {
   if (xhr.readyState === 4 && xhr.status === 200) {
     var data = JSON.parse(xhr.responseText);
@@ -35,7 +35,7 @@ xhr.send();
 
 ```json
 {
-  joke:"Why did the computer file a complaint with HR? It had a conflict with its mouse."
+  "joke":"Why did the computer file a complaint with HR? It had a conflict with its mouse."
 }
 ```
 
