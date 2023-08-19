@@ -20,11 +20,11 @@ fetch("GET","JokesAPI/JokesAPI.php")
 <p>Using AJAX</p>
 
 ```JavaScript
-var xhr = new XMLHttpRequest();
+let xhr = new XMLHttpRequest();
 xhr.open('GET', 'JokesAPI/JokesAPI.php');
 xhr.onreadystatechange = function() {
   if (xhr.readyState === 4 && xhr.status === 200) {
-    var data = JSON.parse(xhr.responseText);
+    let data = JSON.parse(xhr.responseText);
     console.log(data);
   }
 };
